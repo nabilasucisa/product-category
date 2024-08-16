@@ -12,6 +12,6 @@ class Category extends Model
     protected $hidden = ['created_at', 'updated_at'];
 
     public function product() {
-        return $this->hasMant(Product::class, 'category_id', 'id');
+        return $this->hasMany(Product::class, 'category_id', 'id');
     }
 }
